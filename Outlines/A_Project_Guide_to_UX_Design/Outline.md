@@ -2,14 +2,19 @@
 ![img](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/9780138188061.jpg)
 
 
-For User Experience Designers in the Field or in the Making  
-Third Edition  
+For User Experience Designers in the Field or in the Making, Third Edition  
 **Russ Unger and Carolyn Chandler**  
 
 ## [Introduction](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/pref04.xhtml#pref04lev1sec1:~:text=events%2C%20and%20more-,Introduction,-Why%20We%20Wrote)
 ### [Why This Book Was Written](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/pref04.xhtml#pref04lev1sec1:~:text=Our%20goal%20with,your%20own%20purposes.)
 
 The goal with this book is to give the basic tools and context that will help the reader use UX tools and techniques with working teams. The authors' intent was to provide the core information and knowledge that the reader should have to perform many of the activities they will need as a UX professional. Unger and Chandler share their own experiences as well as advice and ideas from other experts to help the reader identify ways to jumpstart the basic materials and allow them to mash up the information and create something newer, better, or even more suited to their own purposes.
+
+### Reflection
+
+The overall tone of the book is welcoming to the reader and reflective. Rather than sounding more dry and impersonal like other textbooks, this book opens by appealing to empathy and positioning UX design as both a mindset and a practice. In that way, this book is similar to Don Norman’s "The Design of Everyday Things." Both books help readers think differently about experiences, where design decisions are grounded in human behavior and mental models.
+
+The book could have stronger navigation for selective reading (e.g., more subheadings so the reader can move around the book and find what they need faster) to help improve the experience of using the book. 
 
 ## [Chapter 1: The Tao of UXD](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch01.xhtml#ch01lev1sec1:~:text=1-,The%20Tao%20of%20UXD,-Curiosity%20Meets%20Passion)
 ### [What Is UX Design?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch01.xhtml#ch01lev1sec1:~:text=User%20experience%20design%20is,user%20behavior%20and%20perception.)
