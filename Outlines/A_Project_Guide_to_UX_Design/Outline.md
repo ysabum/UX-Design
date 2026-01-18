@@ -104,3 +104,82 @@ Some of the more common overlapping roles include:
 The overall tone of the book is welcoming to the reader and reflective. Rather than sounding more dry and impersonal like other textbooks, this book opens by appealing to empathy and positioning UX design as both a mindset and a practice. In that way, this book is similar to Don Norman’s "The Design of Everyday Things." Both books help readers think differently about experiences, where design decisions are grounded in human behavior and mental models.
 
 The book could have stronger navigation for selective reading (e.g., more subheadings so the reader can move around the book and find what they need faster) to help improve the experience of using the book. 
+
+## [Chapter 3: DesignOps, ResearchOps, ContentOps, Oh My!](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch03.xhtml#ch03lev1sec1:~:text=3-,DesignOps%2C%20ResearchOps%2C%20ContentOps%2C%20Oh%20My!,-All%20the%20Work)
+
+### [What is the role of DesignOps on a design team?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch03.xhtml#ch03lev1sec1:~:text=component%20of%20Operations.-,Design%20Operations,-Design%20Operations%20is)
+
+Its primary purpose is to reduce the friction that occurs in doing design-related work. It also aims to enhance collaboration across projects and teams, to create opportunities to foster innovation, and to establish a culture of continuous learning and improvement.
+- DesignOps brings together the people, processes, and tools to streamline the design process, creating a systematic approach to design that maximizes efficiency and minimizes roadblocks.
+- DesignOps helps make the work of design more effective, scalable, and impactful in a business context by meeting the needs of designers in such a way that they can focus on actual design instead of spending their time on less design-y items.
+
+### [Why is DesignOps important?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch03.xhtml#ch03lev1sec1:~:text=The%20need%20for%20consistency%20and%20efficiency%20becomes%20more%20prevalent%20as%20design%20teams%20grow%2C%20and%20that%E2%80%99s%20where%20DesignOps%20comes%20into%20play.)
+
+- The need for consistency and efficiency becomes more prevalent as design teams grow.
+- With design teams more focused on the design aspects of the work, the DesignOps team helps ensure that project and product consistency are in place, which can help with overall brand recognition and customer satisfaction, while also allowing the work of design to happen quicker, resulting in faster times to market.
+    - Combined, all of these things make a positive impact on the business.
+
+### [How are research operations critical to good design?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch03.xhtml#ch03lev1sec2:~:text=and%20their%20skills.-,Research%20Operations,-In%20a%20recent)
+
+ResearchOps is the people, mechanisms, and strategies that set user research in motion. It provides the roles, tools, and processes needed to support researchers in delivering and scaling the impact of user research across an organization.
+
+- ResearchOps becomes crucial in such scenarios, helping out teams by creating and managing the processes for performing research and all research-related activities.
+    - This enables the various research teams to concentrate more on actual research and analysis of user data, which leads to more effective, efficient, and consistent research outcomes.
+
+## [Chapter 4: Project Objectives and Approach](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec1:~:text=4%20Project%20Objectives%20and%20Approach)
+### [What are the four questions you should have answered by the end of a kickoff meeting?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec1:~:text=Why%20is%20the,from%20business%20stakeholders%3F)
+
+- *Why is the project important to the company?*
+
+- *How will stakeholders determine if the project was a success?*
+
+- *What approach or methodology will the project follow?*
+
+- *What are the major dates or milestones for key points, such as getting approval from business stakeholders?*
+
+### [Waterfall Methodology](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec2:~:text=across%20different%20methodologies.-,Waterfall%20Methodology,-A%20waterfall%20methodology)
+
+![waterfall](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/f0403.jpg)
+
+A waterfall methodology involves treating the steps of a project as separate, distinct phases, where approval of one phase is needed before the next phase begins. 
+- The linear process then proceeds through implementation, testing, and maintenance.
+
+### [Agile Methodologies](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec2:~:text=and%20the%20schedule.-,Agile%20Methodologies,-Because%20change%20is)
+
+![agile](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/f0404.jpg)
+
+Agile methodologies follow a more fluid approach, with some steps happening alongside each other... AKA using an agile, or rapid development, approach. An agile approach generally has a greater focus on rapid collaboration and a reduced focus on detailed documentation and formal sign-off.
+
+### [The Double Diamond](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec2:~:text=are%20often%20referenced%3A-,The%20Double%20Diamond,-framework%2C%20created%20by)
+
+![dd](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/04-06_double_diamond.jpg)
+
+The Double Diamond framework models an approach to the discovery work on a project. Teams diverge as they explore the challenge, converge on a definition of the problem, diverge again as they explore ways to address that problem, and converge again on the solution to launch.
+
+### [Lean UX](<https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec2:~:text=that%20product%20well).-,Lean%20UX,-complements%20a%20lean>)
+
+![lean](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/f0405.jpg)
+
+Lean UX complements a lean product management approach. Lean practices focus on reducing waste in the project’s process by keeping documentation to a minimum and keeping a tight constraint on the number of features included in each iteration.
+- For designers, the hallmarks of a lean UX approach are a higher use of sketches and conversations, and a move away from detailed and formalized deliverables.
+
+### [Dual-track product development](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec2:~:text=on%20customer%20response.-,Dual%2Dtrack%20product%20development,-is%20an%20agile)
+
+![dualtrack](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/04-08_dualtrack_agile.jpg)
+
+Dual-track product development is an agile variation that runs two different tracks of work concurrently. A lean Discovery track is meant to help the team explore user needs, while an agile Delivery track focuses on the delivery of product releases.
+
+### [Design sprints](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch04.xhtml#ch04lev1sec2:~:text=not%20been%20validated.-,Design%20sprints,-were%20popularized%20by)
+
+![designsprints](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/04-09_designsprint.jpg)
+
+Design sprints were popularized by Jake Knapp during his work with Google Ventures. They are a method of running some of the phases of the second diamond in the Double Diamond approach in a short, focused scope of work over the course of five days.
+- A small multidisciplinary team immerses themselves in the week-long sprint, exploring and sketching ideas, choosing ones to prototype, and then testing that prototype with customers.
+
+## Reflection for Chapters 3-4
+
+**These chapters are really focused on organization and planning, why are these critical to doing design in industry?** In industry settings, design involves stakeholders, timelines, budgets, technical constraints, etc. As such, organization and planning are critical because they create the conditions that allow good design to happen at the right scale.
+
+**Which of the project planning and management methods appealed to you the most and why?** The method that appealed to me most was dual-track product development. With industry design work, project teams are expected to deliver on deadlines while also learning about users and validating ideas. By giving Discovery its own track, the teams have the space to explore and test without directly affecting the Delivery team. Compared to methods that assume everything can be known upfront, this method feels more realistic. 
+
+**Between design ops, content ops, and research ops, which appealed to you most and why?** ResearchOps appealed to me the most because research is foundational to good design, but in practice it often becomes rushed and/or underutilized due to other logistical challenges, like coordinating and scheduling participants. However ResearchOps directly addresses this problem by creating systems that allow research to be conducted efficiently and at scale, and according to ethical guidelines.
