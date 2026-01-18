@@ -178,7 +178,7 @@ Design sprints were popularized by Jake Knapp during his work with Google Ventur
 
 ## Reflection for Chapters 3-4
 
-**These chapters are really focused on organization and planning, why are these critical to doing design in industry?** In industry settings, design involves stakeholders, timelines, budgets, technical constraints, etc. As such, organization and planning are critical because they create the conditions that allow good design to happen at the right scale.
+**These chapters are really focused on organization and planning, why are these critical to doing design in industry?** In the industry, design involves stakeholders, timelines, budgets, technical constraints, etc. As such, organization and planning are critical because they create the conditions that allow good design to happen at the right scale.
 
 **Which of the project planning and management methods appealed to you the most and why?** The method that appealed to me most was dual-track product development. With industry design work, project teams are expected to deliver on deadlines while also learning about users and validating ideas. By giving Discovery its own track, the teams have the space to explore and test without directly affecting the Delivery team. Compared to methods that assume everything can be known upfront, this method feels more realistic. 
 
