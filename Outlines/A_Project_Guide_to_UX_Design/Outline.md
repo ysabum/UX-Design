@@ -442,8 +442,17 @@ It’s very powerful to combine qualitative and quantitative methods, because th
 
 ## Reflection for Chapters 7-8
 
-**Does user research as described in Chapter 7 line up with how you have seen research/science done in the past? Why or why not?**  
-**What do you think is one potential pitfall when defining user groups id it?**  
-**What is a qualitative question you could ask about someone’s user experience with this book?**  
-**What is a quantitative question you could ask about someone’s user experience with this book?**
-**How can you personally practice building empathy as a design skill?**  
+**Does user research as described in Chapter 7 line up with how you have seen research/science done in the past? Why or why not?** Yes. User research mirrors broader research/science because both follow clear definition of goals, structured methods, systematic data collection, and analysis. 
+  
+Many sciences emphasize hypotheses, observation, and interpretation, all of which mirrors UX Design’s emphasis on developing goals and objectives, hypothesis testing, and gathering valuable insights (or data collection).
+  
+**What do you think is one potential pitfall when defining user groups id it?** One potential pitfall is overgeneralizing users into one group, which can lead to unrepresentative insights. 
+  
+**What is a qualitative question you could ask about someone’s user experience with this book?** "What aspects of this book helped you understand UX research most clearly?"  
+  
+**What is a quantitative question you could ask about someone’s user experience with this book?** "On a scale of 1-10, how confident do you feel applying UX research methods after reading chapters 7-8?"
+  
+**How can you personally practice building empathy as a design skill?**  You can:
+- Listen deeply to users without judgment 
+- Prioritize observation of actual behaviors 
+- Put yourself in the user’s context to understand not just what they do but why they do it
