@@ -308,3 +308,142 @@ Design sprints were popularized by Jake Knapp during his work with Google Ventur
 **Which activities from chapter 6 seemed the most fun to you?** The sketch and critique activity stands out the most to me because it emphasizes rapid idea generation and shared ownership. Additionally, the activity doesn’t rely on technology.
   
 **If you had to perform a collaboration activity to design a better book, which one would you use and why?** I would use affinity diagramming because it helps identify patterns or gaps in the team’s understanding. This would allow feedback, ideas, and reviews/critiques about the book to be grouped into clear themes that inform design decisions.
+
+## [Chapter 7: User Research](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#ch07lev1sec1:~:text=events%2C%20and%20more-,7%20User%20Research,-Get%20to%20Know) 
+
+### [What are the six basic steps of user research?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#ch07lev1sec1:~:text=Carolyn%20Chandler-,Basic%20Steps%20of%20User%20Research,-While%20user%20research)
+
+1. Identify stakeholders and project goals
+    - Create a framework that describes the main types of users you’re designing for so you can focus your efforts in planning your research and recruiting users.
+2. Define user groups
+    - Work with your team and stakeholders to set clear research goals and objectives, then choose one or more methods that will help you meet them.
+3. Determine research methods
+    - Follow the method of your choice. Later in this chapter, we’ll cover some of the most common methods and provide tips on how to go about them.
+4. Recruit participants 
+    - Once you have data, you need to look for trends, bring forward the most important findings, and socialize the results with your team and stakeholders.
+5. Conduct research
+    - Using what you learned from the research, you can solidify your user groups model and extend it into personas and profiles or maps.
+6. Analyze and synthesize findings
+    - These are a collection of statements, or stories, about the needs that a product should address. After creating these, you can then review them along with stakeholder and system requirements and form them into potential features or functions.
+
+### [What are the steps of defining user groups](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#ch07lev1sec2:~:text=Chapter%203.-,Define%20Your%20User%20Groups,-If%20you%20don%E2%80%99t)
+
+1. Create a list of attributes that will help you define the different users of your site.
+
+2. Discuss and expand on those attributes with people at your company who have contact with relevant types of users.
+    - e.g., Customers
+
+3. Prioritize the attributes that seem to have the largest impact on why and how a potential user would use your product.
+
+4. Segment the user groups that you will focus on in research and design.
+
+### [What do these terms mean in the context of user research?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#ch07lev1sec1:~:text=Here%20are%20some%20examples%20of%20what%20could%20vary%3A)
+#### Primary user goals
+- Primary user goals are the main outcomes a user is trying to achieve by using the product or service.
+    - Why are users coming to your site?
+    - What are they trying to accomplish?
+
+#### Roles
+- Roles define what function a user has and how they interact with the product in a specific context.
+    - On an e-commerce site shoppers could include bargain-hunters and connoisseurs.
+
+#### Demographics
+- Demographics are the statistical characteristics of a user group such as age, family, gender, education, and other measurable traits.
+
+#### Experience
+- Experience refers to how familiar or proficient a user is with similar products or related tasks.
+    - Level of education or level of familiarity with the subject matter
+    - Experience with relevant technologies
+
+#### Work attributes
+- Work attributes describe how a user’s job or context influences their behavior and needs within the designed system.
+    - Size of the company users work for
+    - Their department
+    - Type of job (entry level, freelancer, middle management, executive)
+    - Tenure
+
+### [What is a goal, an objective, and a hypothesis in the context of user research?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#:~:text=Goals%20and%20Objectives%20and%20Hypotheses%2C%20Oh%20My!)
+
+- **Goal:** the purpose for the research. 
+    - The state or level of understanding to reach, or the higher-level question to answer.
+
+- **Objective:** something specific, distinct, and measurable that you want to accomplish, where the team believes that fulfilling it will take everyone closer to the goal. 
+    - A goal is likely to have multiple objectives
+    - Conduct multiple studies for goal research
+
+- **Hypothesis:** an idea to validate or invalidate. 
+    - Your research explores whether that hypothesis is true or false.
+
+### [What is the difference between qualitative and quantitative research?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#:~:text=Qualitative%20Research%20vs.%20Quantitative%20Research)
+
+- **Quantitative research:** focused on numerical data
+    - Provides high-confidence, repeatable results among the target user groups
+    - Relies on inclusion sample size large enough that findings from it can be used to make inferences about the way the user group as a whole will respond, within a certain range of error.
+    - E.g., Surveys, product analytics
+
+- **Qualitative research:** focused on gaining context and insight regarding user behavior. 
+    - Successful qualitative research comes from asking good questions, being open to unexpected answers, and finding trends—while avoiding cognitive bias as much as possible.
+
+It’s very powerful to combine qualitative and quantitative methods, because they complement each other. You can discover why something is happening by getting context through qualitative means like an interview or usability test.
+
+### [Describe three user-research methods]()
+- **Surveys:** structured sets of questions administered to a group of users to gather information on behaviors, attitudes, or experiences.
+- **Usability testing:** involves observing users as they complete tasks with a product or prototype to identify areas of confusion, frustration, or success.
+- **User interviews:** one-on-one conversations with participants who belong to one of the site’s primary user groups.
+
+
+[**Table 7.1 Common User-Research Methods**](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch07.xhtml#ch07lev1sec4:~:text=Common%20User%2DResearch%20Methods)
+| ACTIVITY | WHAT IT IS | WHEN IT’S USEFUL | CHALLENGES | TYPICAL TIME FRAME |
+|----------|--------|----------|----------|----------|
+| **User Interviews** | One-on-one conversations with participants who belong to one of the site’s primary user groups | There is access to users, but type of access (in person, remote, etc.) varies. You want to gain context but can’t go to the user. | Getting straightforward opinions.  It can be hard to gather information about attitudes and context, especially if interviews are conducted remotely. | 2–4 weeks for 12 interviews: Up to a week to plan, 1–2 weeks to interview, and up to a week to compile results |
+| **Field Studies** | On-site visits to places with potential users to observe and learn about how they behave in their normal, everyday environment.  Contextual inquiry is a common method that blends interviews and field work. | The project team has little information on target users.  Users work in a unique environment (e.g., a hospital) or have complex tasks or workflows. | Gaining access to the right places.  Going to users’ environment may raise concerns about security, intellectual property, and intrusiveness. | 3–4 weeks for 12 inquiries: 1 week to plan, 1–2 weeks to observe, 1 week to analyze and report results |
+| **Focus Groups** | A group discussion where a moderator leads participants through questions meant to uncover their feelings, attitudes, and ideas about a specific topic | The team believes that users’ attitudes will strongly influence their use of the product (e.g., if there have been problems with it historically). | Structuring your questions in a way that brings the right information out.  Minimizing social desirability bias | 3–4 weeks: 1 week to plan and write questions, 1–2 weeks to conduct focus groups, 1–2 weeks to analyze and report results |
+| **Card Sorting** | Participants are given items (such as topics) on cards and are asked to sort them into groups that are meaningful to them. | You are working on a content source with many items and want an effective structure for your user groups. | Determining which topics would be best to include | 3–4 weeks: 1 week to plan and prepare, 1 week to conduct research, 1–2 weeks to analyze and report results |
+| **Surveys** | Gathering data by using a series of questions consisting of mainly closed-end answers (multiple choice). Used to identify patterns among a larger number of people. | You want to state results in more quantitative terms (e.g., “80% of the target user group said they’ve never traded options”). | Getting an appropriate sample of respondents.  Writing questions that result in accurate answers without leading respondents to a particular answer | 3–4 weeks for a short-run survey: 1 week to plan and write the survey, 1–2 weeks to run the survey, 1 week to analyze and report results |
+| **Product Analytics** | The analysis of data tracked by a product’s usage over time. This may include common web metrics like bounce rates, or information about the frequency of key user interactions chosen by the product team. | An existing product is being improved, and has an active user base large enough for findings to be clear.  Some analytics tools allow you to insert questions into your product for in-context user ratings and feedback on specific features. | Having the tools, access, and expertise needed to pull useful data and make the right conclusions from it.  Regularly setting up the right events to track | Timing depends on the question you’re trying to answer. If you are already tracking relevant metrics, the answer might be found in minutes. If not, you may need months to see a pattern. |
+| **Usability Testing** | Users try to perform typical tasks on a site or application while a facilitator observes and, in some cases, asks questions to understand users’ behavior. | An existing product is being improved.  You have a prototype that lets users complete (or simulate) tasks. | Choosing the appropriate tasks to focus on.  Determining how formal to make the test | 3–4 weeks for 10 users and medium formality: 1 week to plan and write the tasks, 1 week to run the tests, 1–2 weeks to analyze and report results |
+| **A/B Testing (Live Site)** | Diverting some users to one design (A) and others to a second design (B) to see which group “converts” better, meaning more of them complete a specific action like making a purchase. | An existing product is being improved, where the action you’re testing happens frequently enough to give you a clear winner. | Having access to a tool that has this capability and a way to view results.  Determining how many responses are needed before you have a clear answer | These should run for a minimum of 1–2 weeks. It may take longer before you’ll know the result, depending on how many of the relevant actions occur. |
+
+## [Chapter 8: Personas](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch08.xhtml#ch08lev1sec1:~:text=8-,Personas,-Put%20Your%20Team)
+
+### [What is a persona in the context of design?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch08.xhtml#ch08lev1sec1:~:text=Russ%20Unger-,What%20Are%20Personas%3F,-Personas%20are%20artifacts)
+
+- Personas are artifacts that describe specific user types for a product, application, or service.
+- Distinct Persona Types
+    - Marketing-targeted personas that model purchase motivations
+    - Interactive personas that are modeled toward usage behaviors
+
+### [Why are personas useful?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch08.xhtml#ch08lev1sec2:~:text=interactive%20personas.-,Why%20Create%20Personas%3F,-In%20a%20user)
+
+- In a user experience design process, personas help you, your team, and your stakeholders focus on representative users of the product, application, or service.
+    - Personas serve as ever-present reminders of your users. 
+    - Personas help the design team maintain a focus on user needs and behaviors when making design decisions.
+
+### [How do you create a persona?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch08.xhtml#ch08lev1sec4:~:text=with%20actual%20users.-,Creating%20Personas,-After%20identifying%20your)
+
+- Synthesize research data about user group into the form of a persona that represents those user groups in a singular (one persona per user group) fashion
+- Consider the number of user groups you have and what the data is telling you in terms of uniqueness and overlap to help you get to the right number of personas to create and what user groups they represent.
+
+#### Standard Content Considerations
+- Name and image
+- Job/role
+- Goals
+- Pain points
+- Scenarios or use cases
+- Channels/mediums
+- Interaction style
+- Quotes or testimonials
+- Priority level
+
+### What is an IRB and how does that relate to human research in the context of a university?
+- An IRB is a committee at an institution to ensure the protection of the rights, safety, and well-being of human subjects recruited to participate in research activities.
+- It exists to review, approve, modify, or disapprove research involving human subjects prior to commencement, ensuring compliance with ethical standards and federal regulations.
+    - In universities, IRB approval is required before any research involving human participants can begin, ensuring ethical treatment and protection of participants’ rights. 
+
+## Reflection for Chapters 7-8
+
+**Does user research as described in Chapter 7 line up with how you have seen research/science done in the past? Why or why not?**  
+**What do you think is one potential pitfall when defining user groups id it?**  
+**What is a qualitative question you could ask about someone’s user experience with this book?**  
+**What is a quantitative question you could ask about someone’s user experience with this book?**
+**How can you personally practice building empathy as a design skill?**  
