@@ -511,7 +511,7 @@ Proper site map:
 
 ### [Process Map](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec4:~:text=delivering%20site%20maps.-,Process%20Maps,-Using%20many%20of)
 
-- “Process maps (often called task flows) identify paths or processes that users (and sometimes a system) will take as they progress through your website or application
+- Process maps (often called task flows) identify paths or processes that users (and sometimes a system) will take as they progress through your website or application
 
 <img
   src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/f1118.jpg"
@@ -522,7 +522,7 @@ Proper site map:
 ### [What is a journey map and how do you make one?]()
 
 - Journey maps are visualizations of a user’s activity toward a specific goal as it is tied to a specific product or service
-    - “They follow the chronological progression through various experience phases, including the time before and after interacting with a product or service
+    - They follow the chronological progression through various experience phases, including the time before and after interacting with a product or service
 - To create a journey map, you’ll also need your research, secondary research such as analytics and customer interactions, and then the usual workshop supplies (sticky notes and markers and the like) or your digital tool of preference
 
 ![img](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/9-18-superbowl_journeymap.jpg)
@@ -544,7 +544,7 @@ Proper site map:
     style="width:75%;"
     />
 
-**Note:** Process map could also include focus mode, viewer settings, etc.
+    - **Note:** Process map could also include focus mode, viewer settings, etc.
 
 4. **Please sketch out a rough journey map of the digital textbook**
 
@@ -554,4 +554,4 @@ Proper site map:
     style="width:75%;"
     />
 
-**Note:** Right click open image in new tab since it's a little difficult to see.
+    - **Note:** Right click open image in new tab since it's a little difficult to see.
