@@ -456,3 +456,102 @@ Many sciences emphasize hypotheses, observation, and interpretation, all of whic
 - Listen deeply to users without judgment 
 - Prioritize observation of actual behaviors 
 - Put yourself in the user’s context to understand not just what they do but why they do it
+
+## [Chapter 9: Mapping Methods](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=9-,Mapping%20Methods,-From%20Here%20to)
+
+### [Why is mapping critical for good UX design?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=Mapping%20in%20UX%20design%20serves%20as%20a%20wayfinding%20method%2C%20helping%20you%20understand%20what%20needs%20to%20happen%20for%20users%2C%20where%20users%20can%20go%2C%20and%20the%20behaviors%20and%20needs%20of%20your%20users.)
+- Mapping in UX design serves as a wayfinding method, helping you understand what needs to happen for users, where users can go, and the behaviors and needs of your users
+- Mapping can also highlight where users may get stuck and where there may be opportunities to improve their experience while delivering additional value to the business
+
+### [What is a process map?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=Process%20maps%20(often%20called%20task%20flows))
+- Process maps (often called task flows) identify paths or processes that users (and sometimes a system) will take as they progress through your website or application
+
+### Describe each of these components of a process map:
+
+#### [Page/Screen/View](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=what%20they%20represent.-,Page/Screen/View,-According%20to%20Jesse)
+- A page is the basic unit of user experience on the web
+- The simplest, most commonly used format is a plain rectangle.
+
+#### [Pagestack](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=Garrett%E2%80%99s%20Visual%20Vocabulary-,Pagestack,-A%20pagestack%20represents)
+
+- A pagestack represents multiple pages of similar content
+
+- These pages are designed once and are in a design template, but you have the ability to click through many different pages of content—without actually leaving the original template design
+
+#### [Decision Point](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=Garrett%E2%80%99s%20Visual%20Vocabulary-,Decision%20Point,-A%20decision%20point)
+
+- A decision point is used to show the path that a user can take depending on the answer to a question
+
+    - The answer to that question would determine which page (or content view) would be displayed
+
+#### [Connectors and Arrows](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=Garrett%E2%80%99s%20Visual%20Vocabulary-,Connectors%20and%20Arrows,-Connectors%20and%20arrows)
+
+- Connectors and arrows are used to show movement or progress between pages, pagestacks, decision points, and so on
+    - Arrows indicate ‘downstream’ movement toward task completion
+
+#### [Conditions](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec5:~:text=they%20just%20followed.-,Conditions,-A%20dashed%20line)
+
+- A dashed line is a fairly common way to display a condition
+    - It can be used to highlight that a connection to a page—or an entire section of pages—is conditional, based on some other action or event
+
+### [Describe one common mistake when making a process map](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec2:~:text=com//design.-,Common%20Mistakes,-A%20sloppy%20site)
+
+- Sloppy connections
+- Misaligned and unevenly spaced objects
+- Poorly placed text
+- Lack of page numbering
+
+Proper site map:
+
+<img
+  src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/f1113.jpg"
+  alt=""
+  style="width:75%;"
+/>
+
+### [Process Map](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch09.xhtml#ch09lev1sec4:~:text=delivering%20site%20maps.-,Process%20Maps,-Using%20many%20of)
+
+- “Process maps (often called task flows) identify paths or processes that users (and sometimes a system) will take as they progress through your website or application
+
+<img
+  src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/f1118.jpg"
+  alt=""
+  style="width:75%;"
+/>
+
+### [What is a journey map and how do you make one?]()
+
+- Journey maps are visualizations of a user’s activity toward a specific goal as it is tied to a specific product or service
+    - “They follow the chronological progression through various experience phases, including the time before and after interacting with a product or service
+- To create a journey map, you’ll also need your research, secondary research such as analytics and customer interactions, and then the usual workshop supplies (sticky notes and markers and the like) or your digital tool of preference
+
+![img](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/9-18-superbowl_journeymap.jpg)
+
+## Reflection for Chapter 9
+
+1. **How does a good map help you improve design?**
+
+    - A good map makes invisible complexity visible. By identifying the crucial inflection points where friction, challenges, or discomfort can arise, it becomes easier to identify where users struggle and where design changes will have the most impact.
+
+2. **How does a good map help a team implement a design?**
+    - Maps create shared understanding. They give designers, developers, and stakeholders a common reference point for how the system works, which reduces misinterpretation and helps teams stay aligned during implementation.
+
+3. **Please sketch out a rough process map of the digital textbook**
+
+    - <img
+    src="https://i.imgur.com/kDQIqPP.png"
+    alt=""
+    style="width:75%;"
+    />
+
+**Note:** Process map could also include focus mode, viewer settings, etc.
+
+4. **Please sketch out a rough journey map of the digital textbook**
+
+    - <img
+    src="https://i.imgur.com/FAcy09m.png"
+    alt=""
+    style="width:75%;"
+    />
+
+**Note:** Right click open image in new tab since it's a little difficult to see.
