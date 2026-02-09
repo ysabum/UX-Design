@@ -555,3 +555,168 @@ Proper site map:
     />
 
     - **Note:** Right click open image in new tab since it's a little difficult to see.
+
+## [Chapter 10: Product Definition](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec3:~:text=10%20Product%20Definition)
+
+### [Why is product definition important?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec1:~:text=talk%20about%20structure.-,Structuring%20Ideas,-First%2C%20you%E2%80%99ll%20need)
+
+- Product definition refers to the act of breaking ideas up into different levels, giving them actionable structure and detail, and prioritizing which to act on
+- Structuring product ideas will help you:
+    - Understand and compare each idea’s potential value for users and the business
+    - Estimate the idea’s design and development effort
+    - Prioritize which to work on, in which order
+    - Describe concrete needs, possibilities, and constraints to inform the design effort
+    - Determine functional specifications that will ready the ideas for development and Quality Assurance efforts
+
+### [What does Carolyn Chandler mean by defining ideas at "different levels"?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec1:~:text=Here%20are%20three%20levels%20of%20ideas%20that%20you%20could%20use%20for%20the%20discussion.)
+
+- **High level:** Passengers can change or upgrade their assigned seat before purchasing the ticket.
+
+- **Mid level:** Passengers can choose their seat using a map of seats for that plane.
+
+- **Low level:** Passengers can select an available seat from the seat map and see an updated cost.
+
+- The lower the level of idea, the more we get into the “how” of what we’re trying to do in the product and the more ideas we’ll need to generate to cover everything implied in levels above it.
+
+### [What is the format of a user story?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec1:~:text=Here%20are%20three%20levels%20of%20ideas%20that%20you%20could%20use%20for%20the%20discussion.)
+
+- A user story is a unit of work for the product team, written from the point of view of a user, and ideally of a size that can be completed by the team within one development sprint.
+- The structure of the user story is meant to connect the user role with the action they’re taking and the goal that prompted their action. 
+- **Format:**
+    - As a [user role]
+    - I want to [action]
+    - so I can [goal]
+
+### [How are features and epics related to user stories?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec1:~:text=to%20team%20members.-,If%20your%20team,-breaks%20out%20a)
+
+- If your team breaks out a higher level story into smaller stories, you could decide to treat your original, higher-level user story as a feature, which is a distinct piece of functionality with a benefit to the user and business.
+    - A feature tends to be a larger unit of work that might take more than one development sprint to complete.
+- Epics are a collection of related user stories or features, typically at a level that implies a longer-term scope of work or ongoing need for iterative improvement.
+
+<img
+    src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/10-02_epic_hierarchy.jpg"
+    alt=""
+    style="width:75%;"
+    />
+
+### [What does JTBD mean and why is it a useful frame?](<https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec1:~:text=story%2Dmaps).-,Jobs%20to%20be%20done%20(JTBD),-form%20a%20customer>)
+
+- Jobs to be done (JTBD) form a customer-centric framework that focuses on the jobs that people need done rather than just products and their features.
+-  Inspirited by Powers's Motivational Hierarchy consisting of three major categories: Be goals, Do goals, and Motor Control goals
+
+### [Describe two prioritization techniques](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec2:~:text=a%20unified%20understanding.-,Prioritization%20Techniques,-There%20are%20a)
+
+**Reference:** https://foldingburritos.com/blog/product-prioritization-techniques/
+
+- [**Opportunity Scoring**](https://foldingburritos.com/blog/product-prioritization-techniques/#:~:text=help%20tabulate%20everything.-,Opportunity%20Scoring,-%23)
+    - The framework builds on the core precept that people buy products and services to get some job done. 
+    -  Customers are not very good sources of solutions, but their input is extremely valuable in understanding the outcomes they want from the product.
+    - Through User Research and other methods, we can build a list of desired outcomes for the product. 
+    - Then, we need to ask customers to score each outcome on how important it is for them and the degree to which it is satisfied on a scale of 1 to 10. 
+    - Opportunity score: ![alt text](https://foldingburritos.com/blog/product-prioritization-techniques/opportunity-score-formula.png)
+- [**Story Mapping**](https://foldingburritos.com/blog/product-prioritization-techniques/#:~:text=External%20%26%20Qualitative%20techniques-,Story%20Mapping,-%23)
+    - There’s a horizontal axis that represents usage sequence
+        - User stories (or “tasks”) are placed along this axis, in the sequence in which they are performed by the user
+    - The vertical axis stands for criticality
+        - User stories are arranged vertically as to how important they are (from top to bottom)
+    - Groups of related user stories can be grouped as Activities
+        - Create a vertical line to separate groups of stories from others
+    - <img
+    src="https://foldingburritos.com/blog/product-prioritization-techniques/story-map.png"
+    alt=""
+    style="width:75%;"
+    />
+
+### [What are the questions you should ask during feature definition?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch10.xhtml#ch10lev1sec3:~:text=future%20prioritizing%20discussions.-,Feature%20Definition,-Often%20a%20UX)
+
+- Some of the questions you should ask include:
+
+    - What is the product vision?
+
+    - What problem are we solving, and why?
+
+    - What technology considerations should we keep in mind? This includes tech constraints (tech stack, platforms, etc.) and data and content dependencies.
+
+    - What user insights should we keep in mind? This includes user types, behaviors, and needs.
+
+    - What project considerations should we keep in mind? This includes any approvals needed, number of reviews, and who should attend.
+
+    - Are there any design or guiding principles for this effort?
+
+    - What job stories should we include? (See the “Surfing: Job Stories” sidebar for an example.)
+
+    - How are we going to measure success?
+
+    - How we will determine whether the problem has been solved? What is our desired outcome?
+
+    - What do we consider in scope or out of scope for this feature?
+
+    - Are there any thought starters the team would like to share?
+
+## [Chapter 11: Design Foundations](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=11%20Design%20Foundations)
+
+### [What are the trade-offs between unity and variety?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=the%20most%20common.-,Unity%20and%20Variety,-Unity%20is%20the)
+
+- Unity is the degree to which elements in your design have an obvious association with each other.
+    -  Color, shape, style, or the way elements are positioned in relationship to each other (also called proximity)
+- Variety in the elements of a design can make differences between elements clear and add to a sense of freshness or exploration.
+- Part of the challenge of design is figuring out how to achieve unity in visual experience while still representing some of the different users or needs a particular product is targeting.
+
+### [What is an association?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=Associations%20and%20Affordance)
+
+- Associations with these objects in the physical world gives you a clear understanding of how they should work in the digital space.
+
+### [What is an affordance?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=Associations%20and%20Affordance)
+
+- Before a user knows which action to take, they have to realize that it actually is something that can be acted upon.
+
+### [What does skeuomorphism mean?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=the%20search%20bar.-,One%20thing%20you,-may%20have%20noticed)
+
+- Skeuomorphism—a design approach that mimics the visual design of a three-dimensional physical object or space.
+
+### [How is design related to psychology?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=of%20this%20research.-,Psychology,-Up%20to%20this)
+
+- An interaction doesn’t start with a click or touch. It starts with a desire to act and the understanding that something can be acted on.
+- Insights that research in psychology has brought to the design field:
+    - The emotional effect of an attractive design
+    - The personal, or intrinsic, motivation people have to take on new challenges within your product (in particular, the principles of flow and gamification)
+    - Social proof—or the effect that second, third, and 164th opinions and behavior can have on a user’s decisions regarding your product
+
+### [What is social proof and why does it matter?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=support%20that%20desire.-,Social%20Proof,-It%E2%80%99s%20been%20said)
+
+- Popular support of a particular choice or action
+- Faced with an overwhelming number of choices and limited time or money, the power of social proof may help people choose a better investment. 
+
+### [How does accessibility influence design?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch11.xhtml#ch11lev1sec1:~:text=your%20design%20foundation.-,Accessibility,-If%20you%20haven%E2%80%99t)
+
+- Because of the wide variety of situations that may restrict hearing, vision, motor, or cognitive capabilities, accessibility can be considered usability for all.
+    - Wide-ranging benefits from innovations that were originally made in order to improve accessibility
+- Understanding of accessibility needs and encourage thinking to creatively address them
+
+
+## Reflection for Chapters 10-11
+1. **Explain how the product definition stage is a form of design convergence?**
+
+    - The product definition stage is a form of design convergence because it narrows many possible ideas into a smaller, shared understanding of what will actually be built. 
+    - Earlier stages of design encourage exploration and divergence, but product definition forces the team to make decisions, prioritize, and commit. 
+        - It aligns user needs, business goals, and technical constraints into a focused direction, reducing ambiguity and uncertainty. 
+
+2. **Create a doodle explaining the relationship between a user story, feature, and epic**
+
+    - See *How are features and epics related to user stories?*
+    - An epic represents a large goal or initiative, a feature is a major capability within that goal, and user stories describe specific user needs that make the feature real and actionable. 
+
+3. **Look at the app icons on your phone. Describe three of them in terms of unity and variety compared to the phone's overall design**
+
+    - **Note:** I changed the icons of my system apps a few years ago... System app icons are all flat and monochrome
+    - Google Drive, Play Store, and Maps are unified in appearance.
+        - Flat icons, all follow the basic primary/secondary colors that Google is known for in as of the 2020s
+        - Sort of lack variety. It's difficult to differentiate between the icons (other than Maps, maybe) if you're not used to seeing them
+            - However, it is easy to identify what is and isn't a Google app
+
+4. **How can you improve your understanding of what's going on in other people's heads as a designer?**
+
+    - Practice empathy through observation, listening, and asking open-ended questions
+    - Spend time watching how people actually behave (and not just what they say) can help reveal motivations and frustrations
+    - Reflect on assumptions, seek feedback, and expose yourself to perspectives different from your own can also strengthen your design ability
+
