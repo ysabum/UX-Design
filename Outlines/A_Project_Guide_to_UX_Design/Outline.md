@@ -50,7 +50,7 @@ Designing a digital experience for an interactive wall display is very different
 #### Responsive Design
 Should adapt to multiple displays:
 - **Flexible grids:** that expand or contract content based on screen resolution.
-- **Flexible images:** that decrease in size on smaller screens or increase to a set maximum size on larger screens.
+- **Flexible - :** that decrease in size on smaller screens or increase to a set maximum size on larger screens.
 - **Media queries:** which are elements of code that can be placed in a site’s HTML and stylesheet. These queries gather information about a device’s display capabilities and use them to serve up different styles accordingly.
 
 #### Web Apps vs. Native Apps
@@ -719,4 +719,95 @@ Proper site map:
     - Practice empathy through observation, listening, and asking open-ended questions
     - Spend time watching how people actually behave (and not just what they say) can help reveal motivations and frustrations
     - Reflect on assumptions, seek feedback, and expose yourself to perspectives different from your own can also strengthen your design ability
+  
+## [Chapter 12: Content Strategy](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch12.xhtml#ch12lev1sec1:~:text=events%2C%20and%20more-,12%20Content%20Strategy,-More%20Than%20Words)
 
+### [Why does the book say you need content strategy?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch12.xhtml#ch12lev1sec1:~:text=for%20the%20content.-,Content%20Governance%20Plan,-Content%20governance%20serves)
+
+- If you’re going to communicate, you need a goal and a plan.
+  - Content strategy provides a structure for creating that goal and plan, from message architecture through audit, editorial calendar, style guidelines, and more.
+- Content shared across networks is likely to be the first experience a user or customer has with your brand, while the content within a website or application drives loyalty once brand interaction has been accomplished.
+  - If your content is going to stand a chance of being the first thing any of your users see, it should not be the last thing on your mind.
+- Content strategy (or content design or UX writing or whatever someone’s LinkedIn profile calls it) isn’t just a part of design—it’s design within itself.
+  - Content has purpose, intent, and interactions, and it requires thoughtful planning and placement in order to deliver the right experience to your users.
+
+### [Extra: Content Strategy Lifecycle](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch12.xhtml#ch12lev1sec5:~:text=Perhaps%20the%20best%20way%20to%20describe%20why%20is%20with%20this%20content%20lifecycle%20diagram)
+
+![img](https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/12-01_learn_governance.jpg)
+
+- **Strategize:** The majority of the strategy phase is learning about your business or organization and its audiences. From that learning, you can articulate what content you need to provide and why.
+
+- **Define:** In this phase, you are (hopefully collaboratively with other disciplines) designing how your audiences will experience the content you’ve determined they need. And hopefully, you’re doing some testing along the way to learn whether you’re on track.
+
+- **Create:** Now it’s time to produce the content that helps you achieve organizational goals and get your audiences what they need. Lots of learning happens here because you’re likely introducing new ways of working, understanding new subject matter, and testing content with actual users.
+
+- **Measure:** When the content is out in the wild, you will be learning about its performance so you can evolve it. (I won’t get on my soap box about how to make sure you’re using meaningful metrics to assess content performance, but the box is right here next to me.)
+
+- **Evolve:** As you measure content performance and review content to ensure it’s still accurate, timely, and relevant, you’ll learn what changes may need to be made to stay on-strategy
+
+### [How can understanding content strategy make you better at UX design?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch12.xhtml#ch12lev1sec1:~:text=Real%2DTime%20Content%20Collaboration%20Tools)
+
+- The more time that a UX designer spends on deep dive of the content, the less time that UX designer is spending on all of their other tasks. 
+- These tools provide opportunities for wireframes and prototypes that can receive immediate feedback and allow for iterative content design, which in turn fosters a more integrated approach that allows for content and design to evolve side by side.
+- Adopting real-time collaboration tools introduces teams to more agile and responsive approaches to content strategy that aligns closely with UX design and ultimately helps elevate the entire user experience.
+
+## [Chapter 13: Wireframes and Prototypes](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec1:~:text=13%20Wireframes%20and%20Prototypes)
+
+<img
+    src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/13.1_chicago_camps_home-sketch.jpg"
+    alt=""
+    style="width:75%;"
+    />
+
+### [What is a wireframe and when should you make one?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec1:~:text=Wireframes%20make%20collaboration)
+
+- Wireframes make collaboration easier because they are simple artifacts, black and white with boxes and arrows, not much to them.
+- Early in the design process, wireframing should be exploratory.
+
+
+### [Who are wireframes for?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec1:~:text=of%20product%20development.-,Who%20Are%20Your%20Wireframes%20and%20Prototypes%20For%3F,-During%20the%20prototyping)
+
+- During the prototyping process, wireframes are used to represent the product to users, other UX designer counterparts, developers, product and project managers, stakeholders, and any other team members who have an interest in the product.
+
+### [What does the process of making a wireframe look like?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec2:~:text=or%20request%20modifications.-,Getting%20Started%20Creating%20Wireframes,-To%20create%20wireframes)
+
+- Sketch -> Design (Don't Draw)
+- Roughly sketching potential layouts and adding arrows and notes to describe possible interactions is enough.
+- When you are confident in your design choices, a set of detailed wireframes can serve as a blueprint for the product.
+
+<img
+    src="https://learning.oreilly.com/api/v2/epubs/urn:orm:book:9780138188283/files/graphics/13.5_sketching_design_system.jpg"
+    alt=""
+    style="width:75%;"
+    />
+**Description:** A starter sketching design system
+
+### [When is a paper prototype useful?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec4:~:text=to%20use%20when.-,Paper%20Prototyping,-Paper%20prototyping%20is)
+
+- Is cheap and flexible; can revise rapidly from test to test.
+- Used early in the process, paper prototyping can help uncover design-related issues before you’ve become heavily invested.
+- Changes at this stage can be made quickly and efficiently, reducing your risk.
+
+### [When is a digital prototype useful?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec4:~:text=be%20more%20beneficial.-,Digital%20Prototyping,-If%20your%20prototyping)
+
+- If your prototyping needs are greater than paper can handle, you may find that a technology-based solution works better for you and your audience.
+- You may find that the most important aspect of the prototype is how realistically it represents the final system.
+
+
+## Reflection Questions for Chapters 12-13
+
+1. **Do you agree with the authors' assertion that content strategy is critical to the success of an application? Why or why not?**
+
+- The authors argue that content strategy is essential because it establishes long-term structure, accountability, and standards for content, ensuring it consistently supports both organizational goals and user needs throughout its lifecycle. 
+- For this reason, I agree. Content strategy ensures users get clear, useful, and timely information which helps improve usability, align UX with business goals, reduce confusion/frustration, etc.
+
+1. **Give an example of a content-focused application and a non-content-focused application you use; which one is more useful to you personally?** 
+
+- **Content-focused:** News/online article websites, Canvas maybe
+- **Non-content-focused:** Calculator app
+- Both are useful, depending on the task. If I'm researching information for a paper, then content-focused would be better since well-structured content heelps me understand and act on what I need.
+
+3. **When should you choose a paper prototype or a digital prototype?** 
+
+- **Paper prototypes:** best in early stages of design process since they're fast and inexpensive, letting you test ideas and get feedback before investing in detailed design.
+- **Digital prottypes:** better when you need interactive elements, realistic user testing, or higher fidelity to accurately simulate the final product. 
