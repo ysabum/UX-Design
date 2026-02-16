@@ -703,7 +703,7 @@ Proper site map:
 
 2. **Create a doodle explaining the relationship between a user story, feature, and epic**
 
-    - See *How are features and epics related to user stories?*
+    - See [*How are features and epics related to user stories?*](https://github.com/ysabum/UX-Design/blob/main/Outlines/A_Project_Guide_to_UX_Design/Outline.md#how-are-features-and-epics-related-to-user-stories:~:text=I%20can%20%5Bgoal%5D-,How%20are%20features%20and%20epics%20related%20to%20user%20stories%3F,-If%20your%20team)
     - An epic represents a large goal or initiative, a feature is a major capability within that goal, and user stories describe specific user needs that make the feature real and actionable. 
 
 3. **Look at the app icons on your phone. Describe three of them in terms of unity and variety compared to the phone's overall design**
