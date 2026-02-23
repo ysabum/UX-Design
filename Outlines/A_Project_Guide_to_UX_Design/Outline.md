@@ -799,16 +799,93 @@ Proper site map:
 
 1. **Do you agree with the authors' assertion that content strategy is critical to the success of an application? Why or why not?**
 
-- The authors argue that content strategy is essential because it establishes long-term structure, accountability, and standards for content, ensuring it consistently supports both organizational goals and user needs throughout its lifecycle. 
-- For this reason, I agree. Content strategy ensures users get clear, useful, and timely information which helps improve usability, align UX with business goals, reduce confusion/frustration, etc.
+   - The authors argue that content strategy is essential because it establishes long-term structure, accountability, and standards for content, ensuring it consistently supports both organizational goals and user needs throughout its lifecycle. 
+   - For this reason, I agree. Content strategy ensures users get clear, useful, and timely information which helps improve usability, align UX with business goals, reduce confusion/frustration, etc.
 
 2. **Give an example of a content-focused application and a non-content-focused application you use; which one is more useful to you personally?** 
 
-- **Content-focused:** News/online article websites, Canvas maybe
-- **Non-content-focused:** Calculator app
-- Both are useful, depending on the task. If I'm researching information for a paper, then content-focused would be better since well-structured content heelps me understand and act on what I need.
+   - **Content-focused:** News/online article websites, Canvas maybe
+   - **Non-content-focused:** Calculator app
+   - Both are useful, depending on the task. If I'm researching information for a paper, then content-focused would be better since well-structured content heelps me understand and act on what I need.
 
 3. **When should you choose a paper prototype or a digital prototype?** 
 
-- **Paper prototypes:** best in early stages of design process since they're fast and inexpensive, letting you test ideas and get feedback before investing in detailed design.
-- **Digital prottypes:** better when you need interactive elements, realistic user testing, or higher fidelity to accurately simulate the final product. 
+   - **Paper prototypes:** best in early stages of design process since they're fast and inexpensive, letting you test ideas and get feedback before investing in detailed design.
+   - **Digital prottypes:** better when you need interactive elements, realistic user testing, or higher fidelity to accurately simulate the final product. 
+
+## [Chapter 14: Design Testing](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch14.xhtml#ch14lev1sec1:~:text=14-,Design%20Testing,-Let%20People%20Take)
+
+### [What factors should you consider when deciding whether to perform design testing in person or remotely?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch14.xhtml#ch14lev1sec1:~:text=Here%20are%20some%20of%20the%20factors%20to%20weigh%20when%20deciding%20whether%20to%20perform%20research%20in%20person%20or%20whether%20to%20perform%20it%20remotely.)
+
+- Context of environment
+  - By conducting research remotely—rather than going to the user’s location—you will lose some of the overall context of their environment. 
+- Context of need
+  - **Benefit:** If you’re testing a product that’s already available and in use, you can gain important contextual information by immediately recruiting users who have come to the site for their own natural reasons. 
+  - In-person research often doesn’t have useful “just-in-time” element (time-aware research)
+- Access
+  - **Benefit:** Scheduling in-person research requires more time and logistics management, both for the facilitator and for the participant. 
+- Cost
+  - **Benefit:** Remote research does cut out travel costs and time wasted when schedules combust.
+
+### [What are the differences between moderated and unmoderated techniques?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch14.xhtml#ch14lev1sec1:~:text=Moderated%20Techniques%20vs.%20Unmoderated%20Techniques)
+
+| TYPE OF TOOL | WHAT IT IS | EXAMPLES | CONSIDERATIONS |
+|----------|--------|----------|----------|
+| **Recruiting & Panel Management** | A variety of tools that help you quickly access and/or schedule participants. Most automate logistics like scheduling and communication. | User Interviews, Ethnio, HubSpot | These typically work best if you’re looking for a consumer-based audience. A specific screener for a niche audience may take longer or have fewer responses, although some tools allow you to provide your own participant lists to pull from, which can be helpful for B2B products. |
+| **Scheduling** | Calendar tools that allow participants to see and sign up for available times for research. | Calendly, YouCanBookMe, Doodle | Plan the scenarios you’ll run into when choosing a tool. Some may be better for groups scheduling together or for multiple researchers, while others may be more geared toward one-on-one scheduling. |
+| **Incentive Distribution** | Tools that make it easier for you to compensate people for their time, through offerings like virtual gift cards. | GiftBit, Tango Card, Tremendous | Most of these services will have a wide variety of vendors where a participant can spend their incentive, but make sure your likely participants aren’t limited (for example, international participants may not have the same options). |
+| **Brainstorming & Collaboration** | Virtual whiteboards and sticky note walls, for remote collaborative design exercises and affinity diagramming. They also provide templates for different kinds of brainstorming activities. | Miro, Mural, FigJam | Make sure there is an easy way to invite participants without requiring them to subscribe to the service. Plan some time to get participants warmed up on the controls, as they may vary for participants (for example, macOS vs. Windows, or mouse vs. trackpad). |
+| **Usability Testing (Moderated)** | Tools that can be used for interviews, enabling participants to share their screens as they perform tasks. Some are good options if you need to be scrappy in your research due to limited budget, or no access to some of the more full-fledged tools. | Zoom, Google Meet, Skype | Test out your screensharing ahead of time if you can, especially if you’re trying to test mobile app designs, which can be trickier for participants to share. |
+| **A/B Testing (Live Site)** | If you have a live product with a large enough active user base, you can use these tools to pit different designs against each other and see how they perform against a chosen goal for user interactions. | AB Tasty, Adobe Target, Crazy Egg, Apptimize | Tests like this are typically easier to run on a website. If you have a mobile app you’re trying to do this with, check that you have a tool that can handle it (such as Apptimize). |
+| **Insight Management** | A wide variety of tools can help you capture and analyze the data you’re gathering during your research. Transcription tools like Otter can help you convert audio to text. | OtterPilot (transcription), Airtable, Dovetail | The size and structure of your research and design teams will likely drive how formal a toolset you need to manage insights across multiple studies. |
+| **End-to-End Platforms** | Tools that provide many of the capabilities above within one platform. Tools listed here provide for both moderated and unmoderated sessions and some have their own methods for allowing participant screensharing. | UserTesting, Maze, UserZoom, Lookback | The comprehensive nature means many of your needs may work well together. The cost of these may be prohibitive for smaller companies or those performing less regular research. |
+  
+- [**TABLE 14.1** Tools & Platforms Helpful for Design Testing](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch14.xhtml#ch14lev1sec1:~:text=TABLE%2014.1%20Tools%20%26%20Platforms%20Helpful%20for%20Design%20Testing)
+- **Moderated techniques** use a facilitator (also called a moderator) that talks directly to users and guides them through the research. 
+  - For qualitative approaches in general, this gives the facilitator the chance to assess the attitudes and emotional responses of participants, varying their questions in order to dig into areas of interest.
+  - Can be time-consuming and limited in scope because the number of sessions is limited to the hours available from the facilitator.
+- **Unmoderated tests** are set up by the researcher beforehand, and results are analyzed after a set period of time (or after a target number of users have responded). 
+  - Generally, these techniques lead to a larger sample of data showing user success rates and behavior for specific questions and tasks.
+  - Setting up unmoderated research can take more effort than moderated research in the planning stages
+  - Unmoderated tests generally work best for simple, linear tasks where you can ask specific questions and easily understand whether a user has succeeded or failed at a task (or in the case of analytics-based tools, where you can see signs of issues such as drop-offs). 
+    - These tests work best in conjunction with other approaches, like interviews, that provide more information on motivations.
+
+### [What are the steps of usability testing?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch14.xhtml#ch14lev1sec3:~:text=without%20stifling%20creativity.-,Usability%20Testing,-As%20mentioned%20in)
+
+1. Planning the research
+2. Recruiting and logistics
+3. Writing discussion guides
+4. Facilitating
+5. Analyzing and presenting results
+6. Creating recommendations
+
+## [Chapter 15: Launch and Release](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch15.xhtml#ch15lev1sec1:~:text=15-,Launch%20and%20Release,-Where%20Do%20We)
+
+### [What is the difference between a launch and a release?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch15.xhtml#ch15lev1sec2:~:text=or%20release.-,Launch%20vs.%20Release,-The%20terms%20%E2%80%9Claunch)
+
+- The terms "launch" and "release" are often used interchangeably, but they are somewhat distinct approaches and have unique implications
+- Full releases, or launches (such as version 1.0 or 2.0) signal more than just a numerical milestone—they signify a growth-focused shift   
+- Dot releases (or point releases) are denoted by the decimal points after the whole number
+  - More focused on maintenance, where fixes, patches, and incremental updates and enhancements are center stage
+
+## Reflection Questions for Chapters 14-15
+1. **Describe rough usability test plan you could use to test the digital version of this textbook?**
+
+   - I would run a remote, moderated usability test where students are asked to complete tasks such as finding a chapter, locating a definition, or using search and navigation features. 
+   - Sessions could be recorded, where users would be able to think out loud and post-task questions would capture user emotions. The findings would then be synthesized into usability issues and improvement recommendations.
+
+2. **Overall, what did you think about the book?**
+
+   - Overall, the book was for the most part an easy read. It balances a lot of concepts and theories with real-life examples, so the book will be especially useful as a reference during real UX projects rather than just as a conceptual overview. 
+
+3. **What is something you learned from the book that you think will be useful in your career?**
+
+   - I think the chapter on user research will be the most useful, since getting user input, either directly or indirectly, is important for the actual creation of a service or product. 
+
+4. **What is something you learned from the book that you think will be useful in your non-worklife?**
+
+   - The idea of observing real behavior rather than relying on assumptions is useful outside of work. 
+
+5. **What is a change you would make to the book?**
+
+   - I would add more (visual) summaries or checklists at the end of each chapter to make it easier to quickly review key concepts when using the book as a reference during an active project. 
