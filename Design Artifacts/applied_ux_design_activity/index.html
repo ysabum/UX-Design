@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livestream | 26SP CSCI3470-001: Machine Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      font-size: 16px;
+      color: #2d3b45;
+      background: #f5f5f5;
+      line-height: 1.6;
+    }
+
+    /* ── Global Canvas left-rail nav ── */
+    .global-nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      height: 100vh;
+      width: 68px;
+      background: #1a1a2e;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+      padding-bottom: 8px;
+    }
+
+    .global-nav-logo {
+      padding: 14px 0 4px;
+      flex-shrink: 0;
+    }
+
+    .uno-logo {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .global-nav-items {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .global-nav-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 6px 4px;
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.85);
+      gap: 2px;
+    }
+
+    .global-nav-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-icon-wrap {
+      width: 44px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .global-nav-item.active .nav-icon-wrap {
+      background: white;
+      color: #2d3b45;
+    }
+
+    .global-nav-item svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .global-nav-item > span {
+      font-size: 10px;
+      text-align: center;
+      line-height: 1.2;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .global-nav-item.active > span {
+      color: white;
+      font-weight: 700;
+    }
+
+    .global-nav-badge {
+      position: absolute;
+      top: -3px;
+      right: -3px;
+      background: #cc0000;
+      color: white;
+      font-size: 9px;
+      font-weight: 700;
+      border-radius: 10px;
+      min-width: 15px;
+      height: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 2px;
+    }
+
+    .page-content {
+      margin-left: 68px;
+    }
+
+
+    /* Course header */
+    .course-header {
+      background: white;
+      color: #2d3b45;
+      padding: 12px 40px;
+      font-size: 14px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .course-header .breadcrumb {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .course-header a {
+      color: #ff0000;
+      text-decoration: none;
+    }
+
+    .course-header a:hover {
+      text-decoration: underline;
+    }
+
+    .breadcrumb-sep {
+      color: #aaa;
+    }
+
+    .sidebar-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      padding: 2px 4px;
+      margin-right: 4px;
+      flex-shrink: 0;
+    }
+
+    .sidebar-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: #ff0000;
+      border-radius: 1px;
+    }
+
+    .sidebar.sidebar-hidden {
+      display: none;
+    }
+
+    /* Layout */
+    .layout {
+      display: flex;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 20px;
+      gap: 24px;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 200px;
+      flex-shrink: 0;
+    }
+
+    .sidebar nav a {
+      display: block;
+      padding: 8px 12px;
+      color: #2d3b45;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+
+    .sidebar nav a:hover {
+      background: #e8e8e8;
+    }
+
+    .sidebar nav a.active {
+      color: #ff0000;
+      font-weight: 700;
+    }
+
+    /* Main content */
+    .main {
+      flex: 1;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      min-width: 0;
+    }
+
+    /* ── Twitch-style stream layout ── */
+    .stream-layout {
+      display: flex;
+      min-height: 620px;
+    }
+
+    .stream-video-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      border-right: 1px solid #e0e0e0;
+    }
+
+    /* Video player */
+    .stream-video {
+      position: relative;
+      width: 100%;
+      background: #0e0e10;
+      padding-bottom: 56.25%;
+    }
+
+    .stream-video-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: #ccc;
+    }
+
+    .live-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #cc0000;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    .viewer-count {
+      position: absolute;
+      top: 12px;
+      left: 68px;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 3px;
+    }
+
+    .play-ring {
+      width: 68px;
+      height: 68px;
+      border: 3px solid rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-ring::after {
+      content: '';
+      border-left: 24px solid rgba(255,255,255,0.7);
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      margin-left: 5px;
+    }
+
+    .stream-video-inner p {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .stream-video-controls {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 36px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.7));
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      gap: 12px;
+    }
+
+    .ctrl-btn {
+      background: none;
+      border: none;
+      color: rgba(255,255,255,0.8);
+      font-size: 13px;
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .ctrl-btn:hover { color: white; }
+
+    .ctrl-progress {
+      flex: 1;
+      height: 3px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .ctrl-progress::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 35%;
+      background: #cc0000;
+      border-radius: 2px;
+    }
+
+    .ctrl-time {
+      color: rgba(255,255,255,0.7);
+      font-size: 11px;
+    }
+
+    /* Stream info bar */
+    .stream-info {
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .stream-info-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .stream-avatar {
+      width: 42px;
+      height: 42px;
+      background: #394b5c;
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .stream-meta {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .stream-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2d3b45;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .stream-channel {
+      font-size: 13px;
+      color: #cc0000;
+      font-weight: 700;
+    }
+
+    .stream-tags {
+      display: flex;
+      gap: 6px;
+      margin-top: 6px;
+      flex-wrap: wrap;
+    }
+
+    .stream-tag {
+      background: #f0f0f0;
+      color: #555;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 12px;
+    }
+
+    .stream-stats {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 6px;
+    }
+
+    .stream-stat {
+      font-size: 12px;
+      color: #6b7c93;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .stat-dot {
+      width: 8px;
+      height: 8px;
+      background: #cc0000;
+      border-radius: 50%;
+    }
+
+    /* Widgets row */
+    .stream-widgets {
+      display: flex;
+      gap: 0;
+      padding: 10px 16px;
+      border-bottom: 1px solid #e8e8e8;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .widget-card {
+      flex: 1;
+      min-width: 120px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      padding: 10px 12px;
+      background: #fafafa;
+    }
+
+    .widget-card-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #8a9bb0;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .widget-card-body {
+      font-size: 13px;
+      color: #2d3b45;
+    }
+
+    .widget-placeholder-bar {
+      height: 8px;
+      background: #e8e8e8;
+      border-radius: 4px;
+      margin-top: 6px;
+    }
+
+    .widget-placeholder-bar.short { width: 60%; }
+    .widget-placeholder-bar.medium { width: 80%; }
+
+
+    /* ── Knowledge Check Poll ── */
+    .poll-widget {
+      border-top: 1px solid #e0e0e0;
+      background: white;
+    }
+
+    .poll-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 16px;
+      background: #fff8f0;
+      border-bottom: 1px solid #fde8cc;
+    }
+
+    .poll-header-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .poll-live-dot {
+      width: 8px;
+      height: 8px;
+      background: #f97316;
+      border-radius: 50%;
+      animation: pulse 1.8s infinite;
+    }
+
+    .poll-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #c2410c;
+    }
+
+    .poll-counter {
+      font-size: 11px;
+      color: #92400e;
+      background: #fde8cc;
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .poll-timer {
+      font-size: 11px;
+      font-weight: 700;
+      color: #c2410c;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .poll-body, .poll-results {
+      padding: 14px 16px 16px;
+    }
+
+    .poll-question {
+      font-size: 14px;
+      color: #2d3b45;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+
+    .poll-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .poll-option {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #2d3b45;
+      padding: 8px 12px;
+      border: 1px solid #e0e0e0;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.1s, border-color 0.1s;
+    }
+
+    .poll-option:hover {
+      background: #f5f9ff;
+      border-color: #a8c7e8;
+    }
+
+    .poll-option input { accent-color: #cc0000; cursor: pointer; }
+
+    .poll-option.selected {
+      background: #fff0f0;
+      border-color: #cc0000;
+    }
+
+    .poll-actions {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .poll-submit-btn {
+      background: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 7px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Lato', sans-serif;
+      cursor: pointer;
+    }
+
+    .poll-submit-btn:hover { background: #aa0000; }
+    .poll-submit-btn:disabled { background: #ccc; cursor: default; }
+
+    .poll-result-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .poll-result-row {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .poll-result-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #2d3b45;
+    }
+
+    .poll-result-label .pct { font-weight: 700; }
+
+    .poll-result-track {
+      height: 8px;
+      background: #e8e8e8;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .poll-result-fill {
+      height: 100%;
+      border-radius: 4px;
+      background: #cc0000;
+      transition: width 0.6s ease;
+    }
+
+    .poll-result-fill.correct { background: #16a34a; }
+
+    .poll-result-note {
+      font-size: 12px;
+      color: #6b7c93;
+      text-align: right;
+    }
+
+    /* ── Chat sidebar ── */
+    .stream-chat-col {
+      width: 300px;
+      flex-shrink: 0;
+      transition: width 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      height: 620px;
+    }
+
+    .chat-header {
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #2d3b45;
+      border-bottom: 1px solid #e8e8e8;
+      background: #fafafa;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .chat-collapse-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #8a9bb0;
+      font-size: 16px;
+      line-height: 1;
+      padding: 0 2px;
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-collapse-btn:hover { color: #2d3b45; }
+
+    .stream-chat-col.collapsed {
+      width: 36px;
+      overflow: hidden;
+    }
+
+    .stream-chat-col.collapsed .chat-tabs,
+    .stream-chat-col.collapsed .chat-messages,
+    .stream-chat-col.collapsed .chat-input-area {
+      display: none;
+    }
+
+    .stream-chat-col.collapsed .chat-header {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      padding: 14px 8px;
+      justify-content: flex-start;
+      gap: 10px;
+      cursor: pointer;
+      border-bottom: none;
+      border-left: 1px solid #e8e8e8;
+    }
+
+    .stream-chat-col.collapsed .chat-collapse-btn {
+      writing-mode: horizontal-tb;
+      transform: rotate(180deg);
+    }
+
+    .chat-tabs {
+      display: flex;
+      border-bottom: 1px solid #e8e8e8;
+      background: #fafafa;
+      flex-shrink: 0;
+    }
+
+    .chat-tab {
+      flex: 1;
+      padding: 8px 0;
+      font-size: 12px;
+      font-weight: 700;
+      text-align: center;
+      color: #8a9bb0;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .chat-tab.active {
+      color: #cc0000;
+      border-bottom-color: #cc0000;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .chat-msg {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .chat-msg-name {
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    .chat-msg-text {
+      color: #2d3b45;
+    }
+
+    .chat-msg-time {
+      font-size: 10px;
+      color: #aaa;
+      margin-right: 6px;
+    }
+
+    .chat-divider {
+      font-size: 10px;
+      color: #aaa;
+      text-align: center;
+      padding: 4px 0;
+    }
+
+    .chat-input-area {
+      padding: 10px;
+      border-top: 1px solid #e8e8e8;
+      flex-shrink: 0;
+      background: #fafafa;
+    }
+
+    .chat-input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: white;
+      border: 1px solid #d0d0d0;
+      border-radius: 4px;
+      padding: 8px 10px;
+    }
+
+    .chat-input-box input {
+      border: none;
+      outline: none;
+      font-size: 13px;
+      font-family: 'Lato', sans-serif;
+      color: #2d3b45;
+      background: transparent;
+    }
+
+    .chat-input-box input::placeholder { color: #aaa; }
+
+    .chat-input-actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .chat-emoji-btn {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: #8a9bb0;
+    }
+
+    .chat-send-btn {
+      background: #cc0000;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .chat-send-btn:hover { background: #aa0000; }
+
+    .chat-rules {
+      font-size: 10px;
+      color: #aaa;
+      text-align: center;
+      padding: 6px 0 2px;
+    }
+
+    @media (max-width: 900px) {
+      .stream-chat-col {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Global Canvas left nav -->
+  <nav class="global-nav">
+    <div class="global-nav-logo">
+      <img src="uno-o-icon-color.png" alt="UNO" class="uno-logo">
+    </div>
+    <div class="global-nav-items">
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+          </svg>
+        </div>
+        <span>Account</span>
+      </a>
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </div>
+        <span>Dashboard</span>
+      </a>
+      <a href="#" class="global-nav-item active">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <span>Courses</span>
+      </a>
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="8" r="3"/>
+            <path d="M3 18c0-3.3 2.7-6 6-6s6 2.7 6 6"/>
+            <circle cx="17" cy="9" r="2.5"/>
+            <path d="M15.5 18c0-2.5 1.3-4.5 3-4.5"/>
+          </svg>
+        </div>
+        <span>Groups</span>
+      </a>
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/>
+            <line x1="16" y1="2" x2="16" y2="6"/>
+            <line x1="8" y1="2" x2="8" y2="6"/>
+            <line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <span>Calendar</span>
+      </a>
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <span>Inbox</span>
+      </a>
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="1 4 1 10 7 10"/>
+            <path d="M3.51 15a9 9 0 1 0 .49-4.44"/>
+            <polyline points="12 7 12 12 15 14"/>
+          </svg>
+        </div>
+        <span>History</span>
+      </a>
+      <a href="#" class="global-nav-item">
+        <div class="nav-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/>
+            <line x1="8" y1="21" x2="16" y2="21"/>
+            <line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <span>Lucid<br>(Whiteboard)</span>
+      </a>
+    </div>
+    <a href="#" class="global-nav-item">
+      <div class="nav-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+          <line x1="12" y1="17" x2="12.01" y2="17" stroke-width="3"/>
+        </svg>
+        <span class="global-nav-badge">7</span>
+      </div>
+      <span>Help</span>
+    </a>
+  </nav>
+
+  <div class="page-content">
+
+
+    <!-- Course header / breadcrumb -->
+    <div class="course-header">
+      <div class="breadcrumb">
+        <button class="sidebar-toggle" onclick="document.querySelector('.sidebar').classList.toggle('sidebar-hidden')" title="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="#">26SP CSCI3470-001: Machine Learning</a>
+        <span class="breadcrumb-sep">›</span>
+        <span>Livestream</span>
+      </div>
+    </div>
+
+    <!-- Main layout -->
+    <div class="layout">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Announcements</a>
+          <a href="#">Assignments</a>
+          <a href="#">Discussions</a>
+          <a href="#">Grades</a>
+          <a href="#">People</a>
+          <a href="#">Pages</a>
+          <a href="#">Files</a>
+          <a href="#">Syllabus</a>
+          <a href="#">Modules</a>
+          <a href="#" class="active">Livestream</a>
+        </nav>
+      </aside>
+
+      <!-- Livestream content -->
+      <main class="main">
+        <div class="stream-layout">
+
+          <!-- Video + info column -->
+          <div class="stream-video-col">
+
+            <!-- Video player -->
+            <div class="stream-video">
+              <div class="stream-video-inner">
+                <div class="live-badge">● LIVE</div>
+                <div class="viewer-count">34 watching</div>
+                <div class="play-ring"></div>
+                <p>Stream will begin at lecture time</p>
+              </div>
+              <div class="stream-video-controls">
+                <button class="ctrl-btn">▶</button>
+                <div class="ctrl-progress"></div>
+                <button class="ctrl-btn">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+                  </svg>
+                </button>
+                <span class="ctrl-time">LIVE</span>
+                <button class="ctrl-btn" style="margin-left:auto;">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Stream info -->
+            <div class="stream-info">
+              <div class="stream-info-top">
+                <div class="stream-avatar">XZ</div>
+                <div class="stream-meta">
+                  <div class="stream-title">Lecture 8: Support Vector Machines (SVM)</div>
+                  <div class="stream-channel">26SP CSCI3470-001: Machine Learning</div>
+                  <div class="stream-tags">
+                    <span class="stream-tag">Machine Learning</span>
+                    <span class="stream-tag">SVM</span>
+                    <span class="stream-tag">Week 8</span>
+                  </div>
+                </div>
+              </div>
+              <div class="stream-stats">
+                <span class="stream-stat"><span class="stat-dot"></span> Live now</span>
+                <span class="stream-stat">34 viewers</span>
+                <span class="stream-stat">Started 14 min ago</span>
+              </div>
+            </div>
+
+            <!-- Widgets row -->
+            <div class="stream-widgets">
+              <div class="widget-card">
+                <div class="widget-card-title">Q&amp;A</div>
+                <div class="widget-card-body">0 questions queued</div>
+                <div class="widget-placeholder-bar short"></div>
+              </div>
+              <div class="widget-card">
+                <div class="widget-card-title">Participation</div>
+                <div class="widget-card-body">No active poll</div>
+                <div class="widget-placeholder-bar medium"></div>
+              </div>
+              <div class="widget-card">
+                <div class="widget-card-title">Recording</div>
+                <div class="widget-card-body">Auto-saving ●</div>
+                <div class="widget-placeholder-bar short"></div>
+              </div>
+              <div class="widget-card">
+                <div class="widget-card-title">Resources</div>
+                <div class="widget-card-body">Slide deck available</div>
+                <div class="widget-placeholder-bar medium"></div>
+              </div>
+              <div class="widget-card">
+                <div class="widget-card-title">Whiteboard</div>
+                <div class="widget-card-body">28 following live</div>
+                <div class="widget-placeholder-bar short"></div>
+              </div>
+            </div>
+
+            <!-- Knowledge Check Poll -->
+            <div class="poll-widget">
+              <div class="poll-header">
+                <div class="poll-header-left">
+                  <span class="poll-live-dot"></span>
+                  <span class="poll-label">Knowledge Check</span>
+                  <span class="poll-counter" id="poll-counter">12 / 34 answered</span>
+                </div>
+                <span class="poll-timer" id="poll-timer">1:45 remaining</span>
+              </div>
+              <div class="poll-body" id="poll-body">
+                <p class="poll-question">What does the <strong>margin</strong> in an SVM represent?</p>
+                <div class="poll-options" id="poll-options">
+                  <label class="poll-option"><input type="radio" name="poll" value="0"> Distance between the two closest support vectors</label>
+                  <label class="poll-option"><input type="radio" name="poll" value="1"> The model's learning rate</label>
+                  <label class="poll-option"><input type="radio" name="poll" value="2"> The number of training features</label>
+                  <label class="poll-option"><input type="radio" name="poll" value="3"> The kernel transformation function</label>
+                </div>
+                <div class="poll-actions">
+                  <button class="poll-submit-btn" id="poll-submit">Submit Answer</button>
+                </div>
+              </div>
+              <div class="poll-results" id="poll-results" style="display:none;">
+                <p class="poll-question">What does the <strong>margin</strong> in an SVM represent?</p>
+                <div class="poll-result-bars" id="poll-result-bars"></div>
+                <p class="poll-result-note" id="poll-result-note"></p>
+              </div>
+            </div>
+
+          </div><!-- /stream-video-col -->
+
+          <!-- Chat sidebar -->
+          <div class="stream-chat-col">
+            <div class="chat-header" onclick="this.closest('.stream-chat-col').classList.contains('collapsed') && this.closest('.stream-chat-col').classList.remove('collapsed')">
+              <span>Stream Chat</span>
+              <button class="chat-collapse-btn" onclick="event.stopPropagation(); this.closest('.stream-chat-col').classList.toggle('collapsed')" title="Collapse chat">›</button>
+            </div>
+            <div class="chat-tabs">
+              <div class="chat-tab active">Chat</div>
+              <div class="chat-tab">Q&amp;A</div>
+              <div class="chat-tab">Roster</div>
+            </div>
+            <div class="chat-messages">
+              <div class="chat-divider">Lecture started</div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:01</span>
+                <span class="chat-msg-name" style="color:#0770a3;">Xin Zhong</span>
+                <span class="chat-msg-text">Good afternoon everyone, we'll get started in a moment!</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:02</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Jordan Smith</span>
+                <span class="chat-msg-text">Can you share the slides again?</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:02</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Priya Nair</span>
+                <span class="chat-msg-text">Audio sounds good 👍</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:03</span>
+                <span class="chat-msg-name" style="color:#0770a3;">Xin Zhong</span>
+                <span class="chat-msg-text">Slides are linked in the module — check Week 8!</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:04</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Marcus Lee</span>
+                <span class="chat-msg-text">Will this be recorded?</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:04</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Ana Lopez</span>
+                <span class="chat-msg-text">Yes it auto-saves to YuJa</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:05</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Kevin Chen</span>
+                <span class="chat-msg-text">excited for SVM, it's on the midterm right?</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:06</span>
+                <span class="chat-msg-name" style="color:#0770a3;">Xin Zhong</span>
+                <span class="chat-msg-text">Yes — SVM is fair game for the midterm 😄</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:07</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Raj Patel</span>
+                <span class="chat-msg-text">can we go over the kernel trick today?</span>
+              </div>
+              <div class="chat-msg">
+                <span class="chat-msg-time">2:08</span>
+                <span class="chat-msg-name" style="color:#394b5c;">Jordan Smith</span>
+                <span class="chat-msg-text">+1 on kernel trick</span>
+              </div>
+            </div>
+            <div class="chat-input-area">
+              <div class="chat-input-box">
+                <input id="chat-input" type="text" placeholder="Send a message" maxlength="200">
+                <div class="chat-input-actions">
+                  <button class="chat-emoji-btn" id="chat-emoji-btn">😊</button>
+                  <button class="chat-send-btn" id="chat-send-btn">Chat</button>
+                </div>
+              </div>
+              <div class="chat-rules">By chatting you agree to the course chat guidelines.</div>
+            </div>
+          </div><!-- /stream-chat-col -->
+
+        </div><!-- /stream-layout -->
+      </main>
+
+    </div><!-- /layout -->
+  </div><!-- /page-content -->
+
+  <script>
+    const input = document.getElementById('chat-input');
+    const sendBtn = document.getElementById('chat-send-btn');
+    const emojiBtn = document.getElementById('chat-emoji-btn');
+    const messages = document.querySelector('.chat-messages');
+
+    const emojis = ['😊', '👍', '🤔', '📝', '❓', '👏', '🙌'];
+    let emojiIndex = 0;
+
+    function now() {
+      const d = new Date();
+      return d.getHours() + ':' + String(d.getMinutes()).padStart(2, '0');
+    }
+
+    function sendMessage() {
+      const text = input.value.trim();
+      if (!text) return;
+
+      const msg = document.createElement('div');
+      msg.className = 'chat-msg';
+      msg.innerHTML =
+        '<span class="chat-msg-time">' + now() + '</span>' +
+        '<span class="chat-msg-name" style="color:#cc0000;">Hernandez, A.</span>' +
+        '<span class="chat-msg-text">' + text.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</span>';
+
+      messages.appendChild(msg);
+      messages.scrollTop = messages.scrollHeight;
+      input.value = '';
+      input.focus();
+    }
+
+    sendBtn.addEventListener('click', sendMessage);
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    emojiBtn.addEventListener('click', function() {
+      input.value += emojis[emojiIndex % emojis.length];
+      emojiIndex++;
+      input.focus();
+    });
+
+    // ── Knowledge Check Poll ──
+    const correctIndex = 0;
+    const pollResults = [22, 5, 4, 3]; // simulated class votes (correct answer first)
+    const pollSubmit = document.getElementById('poll-submit');
+    const pollOptions = document.querySelectorAll('.poll-option');
+    const pollCounter = document.getElementById('poll-counter');
+
+    pollOptions.forEach(function(opt) {
+      opt.addEventListener('click', function() {
+        pollOptions.forEach(function(o) { o.classList.remove('selected'); });
+        opt.classList.add('selected');
+      });
+    });
+
+    pollSubmit.addEventListener('click', function() {
+      const selected = document.querySelector('input[name="poll"]:checked');
+      if (!selected) return;
+
+      const myChoice = parseInt(selected.value);
+      // add user's vote to results
+      pollResults[myChoice]++;
+      const total = pollResults.reduce(function(a, b) { return a + b; }, 0);
+
+      // build result bars
+      const labels = [
+        'Distance between the two closest support vectors',
+        'The model\'s learning rate',
+        'The number of training features',
+        'The kernel transformation function'
+      ];
+      const barsEl = document.getElementById('poll-result-bars');
+      barsEl.innerHTML = '';
+      pollResults.forEach(function(votes, i) {
+        const pct = Math.round(votes / total * 100);
+        const isCorrect = i === correctIndex;
+        const isYours = i === myChoice;
+        const row = document.createElement('div');
+        row.className = 'poll-result-row';
+        row.innerHTML =
+          '<div class="poll-result-label">' +
+            '<span>' + labels[i] + (isCorrect ? ' ✓' : '') + (isYours && !isCorrect ? ' (your answer)' : '') + '</span>' +
+            '<span class="pct">' + pct + '%</span>' +
+          '</div>' +
+          '<div class="poll-result-track">' +
+            '<div class="poll-result-fill' + (isCorrect ? ' correct' : '') + '" style="width:0"></div>' +
+          '</div>';
+        barsEl.appendChild(row);
+        // animate fill after paint
+        setTimeout(function() {
+          row.querySelector('.poll-result-fill').style.width = pct + '%';
+        }, 30);
+      });
+
+      const noteEl = document.getElementById('poll-result-note');
+      noteEl.textContent = myChoice === correctIndex
+        ? '✓ Correct! ' + total + ' students answered.'
+        : '✗ Not quite. ' + total + ' students answered.';
+      noteEl.style.color = myChoice === correctIndex ? '#16a34a' : '#cc0000';
+
+      document.getElementById('poll-body').style.display = 'none';
+      document.getElementById('poll-results').style.display = 'block';
+      pollCounter.textContent = total + ' / 34 answered';
+    });
+
+    // countdown timer
+    let secs = 105;
+    const timerEl = document.getElementById('poll-timer');
+    const timerInterval = setInterval(function() {
+      secs--;
+      if (secs <= 0) {
+        clearInterval(timerInterval);
+        timerEl.textContent = 'Closed';
+        pollSubmit.disabled = true;
+        return;
+      }
+      const m = Math.floor(secs / 60);
+      const s = String(secs % 60).padStart(2, '0');
+      timerEl.textContent = m + ':' + s + ' remaining';
+    }, 1000);
+  </script>
+</body>
+
+</html>
