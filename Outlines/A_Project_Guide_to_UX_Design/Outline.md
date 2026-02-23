@@ -780,6 +780,7 @@ Proper site map:
     alt=""
     style="width:75%;"
     />
+  
 **Description:** A starter sketching design system
 
 ### [When is a paper prototype useful?](https://learning.oreilly.com/library/view/a-project-guide/9780138188283/ch13.xhtml#ch13lev1sec4:~:text=to%20use%20when.-,Paper%20Prototyping,-Paper%20prototyping%20is)
@@ -801,7 +802,7 @@ Proper site map:
 - The authors argue that content strategy is essential because it establishes long-term structure, accountability, and standards for content, ensuring it consistently supports both organizational goals and user needs throughout its lifecycle. 
 - For this reason, I agree. Content strategy ensures users get clear, useful, and timely information which helps improve usability, align UX with business goals, reduce confusion/frustration, etc.
 
-1. **Give an example of a content-focused application and a non-content-focused application you use; which one is more useful to you personally?** 
+2. **Give an example of a content-focused application and a non-content-focused application you use; which one is more useful to you personally?** 
 
 - **Content-focused:** News/online article websites, Canvas maybe
 - **Non-content-focused:** Calculator app
